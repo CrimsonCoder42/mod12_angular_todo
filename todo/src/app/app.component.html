@@ -7,6 +7,10 @@
 
 <h1>Devin</h1>
 <p><input type="text" id="todo" name="todo" [(ngModel)]="todo"></p>
-
-
 <button type="button" (click)="clickMe()">Click Me</button>
+
+<ul class="list-unstyled">
+  <li *ngFor="let td of todoList">{{td}}
+    <i (click)="deleteItem(td)">delete</i>
+  </li>
+</ul>
